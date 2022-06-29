@@ -124,3 +124,8 @@ button:hover{
     border: 2px solid black;
 }
 
+button:active{
+
+    opacity: 0.7;
+}
+
