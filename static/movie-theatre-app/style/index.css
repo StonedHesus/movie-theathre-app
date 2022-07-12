@@ -9,11 +9,13 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0;
-
+    width: 100%;
+    flex-direction: column;
     font-family: 'Lato', sans-serif;
 }
 
 .container{
+    margin-top: 5%;
     height: 400px;
     width: 100%;
     background-color: gray;
@@ -47,10 +49,15 @@ body{
 
 .btn:hover{
 
-    border: 2px solid black;
+    opacity: 0.8;
 }
 
 i{
     cursor: pointer;
     font-size: 20px;
+}
+
+nav{
+
+    width: 100%;
 }

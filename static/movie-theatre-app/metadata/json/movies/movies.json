@@ -1,0 +1,19 @@
+{
+    "movies" : [
+    {
+        "movie-title" : "Lightyear",
+        "genre" : "Adventure/Comedy",
+        "duration" : "1h 40m",
+        "available" : true,
+        "description" : "Legendary space ranger Buzz Lightyear embarks on an intergalactic adventure alongside ambitious recruits Izzy, Mo, Darby, and his robot companion, Sox."
+    },
+
+    {
+        "movie-title" : "Thor: Love and Thunder",
+        "genre" : "Action/Adventure",
+        "duration" : "2h 13m",
+        "available" : false,
+        "description" : "Thor embarks on a journey unlike anything he's ever faced -- a quest for inner peace. However, his retirement gets interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods."
+    }
+]
+}

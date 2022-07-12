@@ -134,9 +134,53 @@ const MAXIMUM_NUMBER_OF_CARDS_DISPLAYED_AT_ONCE = 3;
 let movieSelection = document.getElementById('movie-selection-carousel');
 let wasViewInitialised = false;
 
+// Initialise a variable which will hold all the information about the movies and which is accessible by all function belonging to this script
+// whose definitions are below the declarations of the variable.
+let movieInfromation;
+
 // Methods of the script.
+function readMoviesData(none){
+    /**
+     *  @param {none} none; this here method takes no formal arguments upon invocation.
+     * 
+     *  This here method reads the JSON package containing the array of information regarding the movies which are currently running in 
+     *  the theatres or are about to be released in the theatre.
+     * 
+     *  @return undefined; this method does not return any particular values.
+     * 
+     *  @author Andrei-Paul Ionescu.
+     */
+
+    /// TODO: Fix the forEach error.
+
+    // Fetch the file from the server which contains the json data and then utilising the promise scheme retreieve each movie object and
+    // store it within the movieInformation array.
+    fetch("./static/movie-theatre-app/metadata/json/movies/movies.json").then((response) => {
+
+        response.json().then((movies) => {
+
+            movies.forEach(function(movie){
+
+                console.log(movie.movie-title);
+            });
+        });
+    }).catch(error => console.log(error));
+}
+
+function displayMovies(){
+
+    for(let i = 0 ; i < MAXIMUM_NUMBER_OF_CARDS_DISPLAYED_AT_ONCE ; ++i){
+
+        
+    }
+}
+
 function initialiseView(){
-    
+
+
+    readMoviesData();
+    displayMovies();
+    wasViewInitialised = true; // To be stored in local storage.
 }
 
 function updateUI(){
@@ -152,3 +196,10 @@ movieSelection.addEventListener('click', (event) => {
 
     updateUI();
 });
+
+
+// Call the methods which need to be invoked every time the view is either accessed or reloaded.
+
+if(!wasViewInitialised) initialiseView();
+
+updateUI();
